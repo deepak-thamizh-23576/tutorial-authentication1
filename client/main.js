@@ -1,4 +1,5 @@
 async function signupAction() {
+  //Get the details of the user from the HTML page
   const firstName = document.getElementById("firstname").value
   const lastName = document.getElementById("lastname").value
   const email = document.getElementById("mailid").value
@@ -11,6 +12,7 @@ async function signupAction() {
   }
 
   const auth = catalyst.auth
+  //The signup method will sign up the user with the specified data
   const signupresponse = await auth.signUp(data)
 
   if (signupresponse.status === 200) {
@@ -26,6 +28,7 @@ async function signupAction() {
 }
 
 async function showProfile() {
+  //The catalyst.auth.isUserAuthenticated() method allows only authenticated users, i.e., the users who are logged in, to access the pages
   try {
     const result = await catalyst.auth.isUserAuthenticated()
 
@@ -48,6 +51,7 @@ async function showProfile() {
 }
 
 function logout() {
+  //The signOut method is used to sign the user out of the application
   const redirectURL = "/"
   catalyst.auth.signOut(redirectURL)
 }
