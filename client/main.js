@@ -9,8 +9,6 @@ async function signupAction() {
     last_name: lastName,
     email_id: email,
     platform_type: "web",
-    redirect_url:
-      "https://photos-862569740.development.catalystserverless.com/app/home.html",
   };
   var auth = catalyst.auth;
   //The signup method will sign up the user with the specified data
