@@ -11,10 +11,10 @@
     <script src="/__catalyst/sdk/init.js"></script>
     <script>
       const config = {
-        css_url: "/app/CSS/embeddediframe.css", // Login page customization css file path, if not provided default css will be rendered
+        css_url: "/app/css/embeddediframe.css", // Login page customization css file path, if not provided default css will be rendered
         is_customize_forgot_password: false, // Default value is false. Keep this value as true, if you wish to customize Forgot Password page
         forgot_password_id: "login", // Element id in which forgot password page should be loaded, by default will render in the "loginDivElementId"
-        forgot_password_css_url: "/app/CSS/fpwd.css",
+        forgot_password_css_url: "/app/css/fpwd.css",
         // signin_providers_only: true, // Forgot password page customization css file path, if not provided default css will be rendered
       };
       catalyst.auth.signIn("login", config);
